@@ -12,6 +12,8 @@ jobs:
       - run: npm install
       - run: npm run build
       - aws-s3/sync:
+          aws-access-key-id: AWS_ACCESS_KEY_ID
+          aws-secret-access-key: AWS_SECRET_ACCESS_KEY
           from: dist
           to: 's3://kiriaze-demo-ci-cd/'
           arguments: |
