@@ -1,10 +1,10 @@
 version: 2.1
 orbs:
-  aws-s3: circleci/aws-s3@1.0.4
+  aws-s3: circleci/aws-s3@x.y
 jobs:
   build:
     docker:
-      - image: circleci/python:2.7-node
+      - image: 'cimg/python:3.6'
     environment:
       AWS_REGION: us-east-1
     steps:
